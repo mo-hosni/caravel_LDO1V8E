@@ -53,23 +53,23 @@ module user_project_wrapper (user_clock2,
  output [31:0] wbs_dat_o;
  input [3:0] wbs_sel_i;
 
-EF_LDOR1V8E LDO_1 (
+EF_LDOR1V8E EF_LDOR1V8E_0 (
     .vss(vssa1),
     .vdd(vdda1),
     .en(analog_io[7]),
     .vo(analog_io[8])
 );
-EF_LDOR1V8E LDO_2 (
+EF_LDOR1V8E EF_LDOR1V8E_1 (
     .vss(vssa1),
     .vdd(vdda1),
     .vo(analog_io[10]),
     .en(analog_io[11])
 );
-EF_LDOR1V8E LDO_3 (
+EF_LDOR1V8E EF_LDOR1V8E_2 (
     .vss(vssa1),
     .vdd(vdda1),
     .vo(analog_io[13]),
-    .en(analog_io[14])
+    .en(vdda1)
 );
 
 endmodule
